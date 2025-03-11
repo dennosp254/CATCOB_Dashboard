@@ -4,7 +4,7 @@
     --clr-primary: #008cff;
     --clr-danger: #008cff;
     --clr-success: #04da04;
-    --clr-warning: #f8606c;
+    --clr-warning: #ff7300;
     --clr-white: #ffffff;
     --clr-info-dark: #505d6d;
     --clr-info-light: #dce1eb;
@@ -99,6 +99,9 @@ b {
 }
 .warning {
     color: var(--clr-warning);
+}
+.red {
+    color: #ff0015;
 }
 .container {
     display: grid;
@@ -215,10 +218,12 @@ main .insights > div {
     border-radius: var(--crd-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
+    transition: all 500ms ease;
 }
 main .insights > div:hover {
     box-shadow: none;
+    border: 1px solid #505a6638;
+    cursor: pointer;
 }
 main .insights > div span {
     padding: .5rem;
@@ -233,7 +238,7 @@ main .insights > div.sales span {
     background: var(--clr-success)
 }
 main .insights > div.income span {
-    background: #ff7300;
+    background: var(--clr-warning);
 }
 main .insights > div .middle {
     display: flex;
@@ -291,4 +296,35 @@ main .insights small {
     margin-top: 1.3rem;
     display: block;
     font-weight: 600;
+}
+/* RECENT Orders */
+main .recent-orders {
+    margin-top: 2.5rem;
+}
+main .recent-orders h2 {
+    margin-bottom: .8rem;
+}
+main .recent-orders table {
+    background: var(--clr-white);
+    width: 100%;
+    border-radius: var(--crd-border-radius);
+    padding: var(--crd-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 400ms ease;
+}
+main .recent-orders table:hover {
+    box-shadow: none;
+    border: 1px solid #505a6638;
+}
+main table tbody td {
+    height: 2.8rem;
+    border-top: 1px solid var(--clr-light);
+    color: var(--clr-dark-variant);
+}
+main .recent-orders a {
+    text-align: center;
+    display: block;
+    margin: 1.2rem auto;
+    color: var(--clr-primary);
 }
